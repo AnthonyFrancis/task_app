@@ -21,5 +21,9 @@ Things you may want to cover:
 
 * Deployment instructions
 
+Setup Application
+
+* bin/dev
+
 * ...
 # project_kickoff_rails_7_new
