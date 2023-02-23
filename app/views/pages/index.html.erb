@@ -42,6 +42,51 @@
   opacity: 1;
 }
 
+/* Round 2 */
+
+.round2 {
+  position: relative;
+}
+
+.round2 label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 15px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 15px;
+}
+
+.round2 label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.round2 input[type="checkbox"] {
+  visibility: hidden;
+}
+
+/*.round2 input[type="checkbox"]:checked + label {
+  background-color: #66bb6a;
+  border-color: #66bb6a;
+}*/
+
+.round2 input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
 </style>
 
 <!-- component -->
@@ -141,10 +186,9 @@
             <div class="flex items-start mb-4 text-sm">
                 <div class="flex-1 overflow-hidden">
                     <div>
-                        <span class="font-bold text-xl ml-10">Global Messaging API</span>
-                        <span class="text-grey text-xs">11:46</span>
+                        <span class="font-bold text-xl ml-10">Gamma - Testing Integration</span>
                     </div>
-                    <div class="flex items-start my-2">
+                    <div class="flex items-start mt-2">
                         <div class="flex items-center">
                           <div class="relative flex items-center justify-center flex-shrink-0 w-8 h-8 mr-2 mb-4 md:mb-6 overflow-hidden bg-gray-50 rounded">
                              <i class="fa fa-solid fa-grip-vertical fa-lg"></i>
@@ -158,11 +202,11 @@
                           </div>
                         </div>
                         <div class="flex-1 overflow-hidden">
-                            <p class="text-black leading-normal">Update: Give heads up we’ll be adding documentation to our website for the new Global Messaging API - for UK, for Beta by the end of this month Feb 2</p>
+                            <p class="text-black leading-normal">VPN connection</p>
                         </div>
                     </div>
                     <hr>
-                    <div class="flex items-start my-2">
+                    <div class="flex items-start mt-2">
                         <div class="flex items-center">
                           <div class="relative flex items-center justify-center flex-shrink-0 w-8 h-8 mr-2 mb-4 md:mb-6 overflow-hidden bg-gray-50 rounded">
                              <i class="fa fa-solid fa-grip-vertical fa-lg"></i>
@@ -307,15 +351,270 @@
             </div>
         </div>
     </div>
-        <!-- Sidebar / channel list -->
-    <div class="text-purple-lighter flex-none w-3/12 p-6 hidden md:block">
+    <!-- Sidebar / channel list -->
+    <div class="flex-1 flex flex-col bg-white overflow-hidden flex-none w-4/12 px-6">
+        <!-- Top bar -->
+        <div class="border-b flex px-12 mt-4 flex-none">
+
+            <div class=" flex justify-between">
+                <!--sub navbar -->
+                <div class=" inline-flex justify-center">
+                  <ul class="flex justify-between sm:flex-row space-x-2">
+                    <li class="cursor-pointer flex items-center block py-1 font-semibold border-b-2 border-gray-800 text-gray-600 no-underline hover:text-gray-800 focus:outline-none ">
+                      <a id="#first" href="#first" class="no-underline">Subprojects</a>
+                    </li>
+                    <li class="cursor-pointer flex items-center block px-2 py-1 font-medium border-gray-800 text-gray-500 no-underline hover:text-gray-800 focus:outline-none ">
+                      <a id="#second" href="#first" class="no-underline">People</a>
+                    </li>
+                    <li class="cursor-pointer flex items-center block px-2 py-1 font-medium border-gray-800 text-gray-500 no-underline hover:text-gray-800 focus:outline-none ">
+                      <a id="#second" href="#first" class="no-underline">Company</a>
+                    </li>
+                  </ul>
+                </div>           
+            </div>
+            <div class="ml-auto hidden md:block">
+        <!--         <div class="relative">
+                    <input type="search" placeholder="Search" class="appearance-none border border-grey rounded-lg pl-8 pr-4 py-2">
+                    <div class="absolute pin-y pin-l pl-3 flex items-center justify-center">
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <!-- Chat messages -->
+        <div class="px-2 py-4 flex-1 overflow-y-scroll">
+            <!-- A Subproject -->
+            <div class="flex items-start mb-4 text-sm">
+                <div class="flex-1 overflow-hidden">
+                    <div>
+                        <span class="font-bold text-xl">VPN connection</span>
+                    </div>
+                    <div class="flex items-start mt-2">
+                        <div class="flex items-center">
+                         
+                          <div class="flex items-center  mb-4">
+                             <div class="relative flex items-center justify-center flex-shrink-0 w-5 h-5 mr-1 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-sm" aria-hidden="true"></i>
+                          </div>
+                         
+                              <div class="round2 py-2 px-2 mr-2">
+                                  <label for="checkbox"></label>
+                              </div>
+                              <div class="flex-1 overflow-hidden">
+                                <p class="text-black leading-normal">Send form to Horisen</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="flex items-start mt-2">
+                        <div class="flex items-center">
+                         
+                          <div class="flex items-center  mb-4">
+                             <div class="relative flex items-center justify-center flex-shrink-0 w-5 h-5 mr-1 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-sm" aria-hidden="true"></i>
+                          </div>
+                         
+                              <div class="round2 py-2 px-2 mr-2">
+                                  <label for="checkbox"></label>
+                              </div>
+                              <div class="flex-1 overflow-hidden">
+                                <p class="text-black leading-normal">Get VPN setup</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="flex items-start mt-2">
+                        <div class="flex items-center">
+                         
+                          <div class="flex items-center  mb-4">
+                             <div class="relative flex items-center justify-center flex-shrink-0 w-5 h-5 mr-1 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-sm" aria-hidden="true"></i>
+                          </div>
+                         
+                              <div class="round2 py-2 px-2 mr-2">
+                                  <label for="checkbox"></label>
+                              </div>
+                              <div class="flex-1 overflow-hidden">
+                                <p class="text-black leading-normal">Get SMPP Binds details to configure in Horisen</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="flex items-start mt-2">
+                        <div class="flex items-center">
+                         
+                          <div class="flex items-center  mb-4">
+                             <div class="relative flex items-center justify-center flex-shrink-0 w-5 h-5 mr-1 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-sm" aria-hidden="true"></i>
+                          </div>
+                         
+                              <div class="round2 py-2 px-2 mr-2">
+                                  <label for="checkbox"></label>
+                              </div>
+                              <div class="flex-1 overflow-hidden">
+                                <p class="text-black leading-normal">Setup SMPP Binds details in Horisen</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="flex items-start mt-2">
+                        <div class="flex items-center">
+                         
+                          <div class="flex items-center  mb-4">
+                             <div class="relative flex items-center justify-center flex-shrink-0 w-5 h-5 mr-1 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-sm" aria-hidden="true"></i>
+                          </div>
+                         
+                              <div class="round2 py-2 px-2 mr-2">
+                                  <label for="checkbox"></label>
+                              </div>
+                              <div class="flex-1 overflow-hidden">
+                                <p class="text-black leading-normal">See we can get the virtual number from Gamma</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <hr>
+                    <div class="flex items-start my-2">
+                        <div class="round w-10 h-10 items-center text-center">
+                            <i class="fa fa-solid fa-plus" aria-hidden="true"></i>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Add Item</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- A Subproject -->
+            <div class="flex items-start mb-4 text-sm">
+                <div class="flex-1 overflow-hidden">
+                    <div>
+                        <span class="font-bold text-xl ml-10">Syniverse International Message Blocking</span>
+                        <span class="text-grey text-xs">11:46</span>
+                    </div>
+                    <div class="flex items-start my-2">
+                        <div class="flex items-center">
+                          <div class="relative flex items-center justify-center flex-shrink-0 w-8 h-8 mr-2 mb-4 md:mb-6 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-lg" aria-hidden="true"></i>
+                          </div>
+                         
+                          <div class="w-10 h-12">
+                            <div class="round">
+                                <input type="checkbox" checked="" id="checkbox">
+                                <label for="checkbox"></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Update: Give heads up we’ll be adding documentation to our website for the new Global Messaging API - for UK, for Beta by the end of this month Feb 2</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="flex items-start my-2">
+                        <div class="flex items-center">
+                          <div class="relative flex items-center justify-center flex-shrink-0 w-8 h-8 mr-2 mb-4 md:mb-6 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-lg" aria-hidden="true"></i>
+                          </div>
+                         
+                          <div class="w-10 h-12">
+                            <div class="round">
+                                <input type="checkbox" checked="" id="checkbox">
+                                <label for="checkbox"></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Need to create a ticket for the New API documnetation is reviewed by DevX team and published on our wesbite.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="flex items-start my-2">
+                        <div class="round w-10 h-10 items-center text-center">
+                            <i class="fa fa-solid fa-plus" aria-hidden="true"></i>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Add Item</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- A Subproject -->
+            <div class="flex items-start mb-4 text-sm">
+                <div class="flex-1 overflow-hidden">
+                    <div>
+                        <span class="font-bold text-xl ml-10">Weekly Sync Horisen and BW</span>
+                        <span class="text-grey text-xs">11:46</span>
+                    </div>
+                    <div class="flex items-start my-2">
+                        <div class="flex items-center">
+                          <div class="relative flex items-center justify-center flex-shrink-0 w-8 h-8 mr-2 mb-4 md:mb-6 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-lg" aria-hidden="true"></i>
+                          </div>
+                         
+                          <div class="w-10 h-12">
+                            <div class="round">
+                                <input type="checkbox" checked="" id="checkbox">
+                                <label for="checkbox"></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Update: Give heads up we’ll be adding documentation to our website for the new Global Messaging API - for UK, for Beta by the end of this month Feb 2</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="flex items-start my-2">
+                        <div class="flex items-center">
+                          <div class="relative flex items-center justify-center flex-shrink-0 w-8 h-8 mr-2 mb-4 md:mb-6 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-lg" aria-hidden="true"></i>
+                          </div>
+                         
+                          <div class="w-10 h-12">
+                            <div class="round">
+                                <input type="checkbox" checked="" id="checkbox">
+                                <label for="checkbox"></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Need to create a ticket for the New API documnetation is reviewed by DevX team and published on our wesbite.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="flex items-start my-2">
+                        <div class="round w-10 h-10 items-center text-center">
+                            <i class="fa fa-solid fa-plus" aria-hidden="true"></i>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Add Item</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pb-6 px-12 flex-none">
+            <div class="flex rounded-lg border-2 border-grey overflow-hidden">
+                <div class="focus:outline-none py-2">
+                    <input class="w-full px-4 focus:outline-none mb-4" placeholder="Subproject name">
+                    <!-- <input type="text" class="w-full px-4 focus:outline-none mb-4" placeholder="Description" /> -->
+                    <input type="search" placeholder="Search" class="ml-4 appearance-none border focus:outline-none border-grey rounded-lg pr-4 py-2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--     <div class="text-purple-lighter flex-none w-3/12 p-6 hidden md:block">
         <div class="cursor-pointer mb-4">
             <div class="bg-white h-12 w-12 flex items-center justify-center text-black text-2xl font-semibold rounded-lg mb-1 overflow-hidden">
                 <img src="https://pbs.twimg.com/profile_images/895274026783866881/E1G1nNb0_400x400.jpg" alt="">
             </div>
             <div class="text-center text-white opacity-50 text-sm">&#8984;1</div>
         </div>
-        <p>Image, Web bookmark, Video, Audio, Code, File, Email thread, assigned  </p>
+        <p>Image, Web bookmark, Video, Audio, Code, File, Email thread, assigned</p>
         <div class="cursor-pointer mb-4">
             <div class="bg-indigo-lighter opacity-25 h-12 w-12 flex items-center justify-center text-black text-2xl font-semibold rounded-lg mb-1 overflow-hidden">
             </div>
@@ -326,5 +625,5 @@
                 <svg class="fill-current h-10 w-10 block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16 10c0 .553-.048 1-.601 1H11v4.399c0 .552-.447.601-1 .601-.553 0-1-.049-1-.601V11H4.601C4.049 11 4 10.553 4 10c0-.553.049-1 .601-1H9V4.601C9 4.048 9.447 4 10 4c.553 0 1 .048 1 .601V9h4.399c.553 0 .601.447.601 1z"/></svg>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
