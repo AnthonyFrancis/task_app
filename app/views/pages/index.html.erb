@@ -1,63 +1,279 @@
-<section class="py-20" style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%)">
-  <div class="container mx-auto px-6 text-center py-20">
-    <h2 class="text-4xl font-bold mb-2 text-white">
-      Welcome to Rails Kick Off!
-    </h2>
-    <h3 class="text-2xl mb-8 text-gray-200">
-      Build products faster in Ruby on Rails
-    </h3>
-  </div>
-</section>
+<style type="text/css">
+    .round {
+  position: relative;
+}
 
-<section>
-  <div class="py-20 bg-gray-50 radius-for-skewed">
-    <div class="container mx-auto px-4">
-      <div class="flex flex-wrap -mx-4">
-        <div class="mb-12 lg:mb-0 w-full md:w-1/2 lg:w-1/4 px-4">
-          <div class="relative flex items-center justify-center flex-shrink-0 w-14 h-14 mr-3 mb-4 md:mb-6 overflow-hidden bg-purple-500 rounded shadow-inner">
-            <i class="fas fa-wind text-white fa-2x"></i>
-          </div>
-          <h4 class="mb-4 text-2xl font-bold font-heading">Tailwind CSS</h4>
-          <p class="text-gray-500 leading-loose">Fusce quam tellus, placerat eu metus ut, viverra aliquet purus. Suspendisse potenti. Nulla non nibh feugiat.</p>
-        </div>
-        <div class="mb-12 lg:mb-0 w-full md:w-1/2 lg:w-1/4 px-4">
-      
-          <div class="relative flex items-center justify-center flex-shrink-0 w-14 h-14 mr-3 mb-4 md:mb-6 overflow-hidden bg-purple-500 rounded shadow-inner">
-            <i class="fab fa-font-awesome-flag text-white fa-2x"></i>
-          </div>
+.round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 28px;
+}
 
+.round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
 
-          <h4 class="mb-4 text-2xl font-bold font-heading">Font Awesome Pro</h4>
-          <p class="text-gray-500 leading-loose">Ut tempus tellus ac nisi vestibulum tempus. Nunc tincidunt lectus libero, ac ultricies augue elementum at.</p>
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background-color: #66bb6a;
+  border-color: #66bb6a;
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+</style>
+
+<!-- component -->
+<div class="font-sans antialiased h-screen flex">
+    <div class="bg-gray-50 text-purple-lighter flex-none w-64 pb-6 hidden md:block border-r">
+        <div class="mb-2 mt-3 px-4 flex justify-between">
+            <div class="flex-auto">
+                <h1 class="font-semibold text-xl leading-tight mb-1 truncate">Tailwind CSS</h1>
+                <div class="flex items-center mb-6">
+                    <span class="bg-green rounded-full block w-2 h-2 mr-2"></span>
+                    <span class=" opacity-50 text-sm">Adam Wathan</span>
+                </div>
+            </div>
+            <div>
+                <svg class="h-6 w-6 fill-current opacity-25" viewBox="0 0 20 20">
+                    <path d="M14 8a4 4 0 1 0-8 0v7h8V8zM8.027 2.332A6.003 6.003 0 0 0 4 8v6l-3 2v1h18v-1l-3-2V8a6.003 6.003 0 0 0-4.027-5.668 2 2 0 1 0-3.945 0zM12 18a2 2 0 1 1-4 0h4z" fill-rule="evenodd" />
+                </svg>
+            </div>
         </div>
-        <div class="mb-12 lg:mb-0 w-full md:w-1/2 lg:w-1/4 px-4">
-          <div class="relative flex items-center justify-center flex-shrink-0 w-14 h-14 mr-3 mb-4 md:mb-6 overflow-hidden bg-purple-500 rounded shadow-inner">
-            <i class="fa fa-user text-white fa-2x"></i>
-          </div>
-          <h4 class="mb-4 text-2xl font-bold font-heading">Devise</h4>
-          <p class="text-gray-500 leading-loose">Donec ut ligula nunc. Mauris blandit vel est et facilisis. Integer sapien felis, aliquet at posuere et, porttitor quis ligula.</p>
+        <div class="mb-8">
+            <div class="px-4 mb-2 flex justify-between items-center">
+                <div class="opacity-75">Projects</div>
+                <div>
+                    <svg class="fill-current h-4 w-4 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M11 9h4v2h-4v4H9v-4H5V9h4V5h2v4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="bg-teal-dark py-1 px-4">Global Messaging</div>
         </div>
-        <div class="w-full md:w-1/2 lg:w-1/4 px-4">
-          <span class="mb-4 md:mb-6 inline-block bg-purple-500 p-3 text-white rounded">
-            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-              <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path>
-            </svg>
-          </span>
-          <h4 class="mb-4 text-2xl font-bold font-heading">Morbi sagittis ligula sit amet elit maximus</h4>
-          <p class="text-gray-500 leading-loose">Duis ut facilisis orci. Morbi lacinia nunc a augue eleifend, sed placerat ex faucibus. Duis ante arcu, pretium ac luctus vulputate.</p>
+        <div class="mb-8">
+            <div class="px-4 mb-2 flex justify-between items-center">
+                <div class="opacity-75">Direct Messages</div>
+                <div>
+                    <svg class="fill-current h-4 w-4 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M11 9h4v2h-4v4H9v-4H5V9h4V5h2v4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="flex items-center mb-3 px-4">
+                <span class="bg-green rounded-full block w-2 h-2 mr-2"></span>
+                <span class="opacity-75">Adam Wathan <span class="text-grey text-sm">(you)</span></span>
+            </div>
+            <div class="flex items-center mb-3 px-4">
+                <span class="bg-green rounded-full block w-2 h-2 mr-2"></span>
+                <span class="opacity-75">David Hemphill</span>
+            </div>
+            <div class="flex items-center px-4 mb-6 opacity-50">
+                <span class="border border-white rounded-full w-2 h-2 mr-2"></span>
+                <span class="">Steve Schoger</span>
+            </div>
         </div>
-      </div>
+        <div>
+            <div class="px-4 mb-2 flex justify-between items-center">
+                <div class="opacity-75">Apps</div>
+                <div>
+                    <svg class="fill-current h-4 w-4 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M11 9h4v2h-4v4H9v-4H5V9h4V5h2v4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="skew skew-bottom mr-for-radius">
-    <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-50" viewBox="0 0 10 10" preserveAspectRatio="none">
-      <polygon fill="currentColor" points="0 0 10 0 0 10"></polygon>
-    </svg>
-  </div>
-  <div class="skew skew-bottom ml-for-radius">
-    <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-50" viewBox="0 0 10 10" preserveAspectRatio="none">
-      <polygon fill="currentColor" points="0 0 10 0 10 10"></polygon>
-    </svg>
-  </div>
-</section>
+    <!-- Chat content -->
+    <div class="flex-1 flex flex-col bg-white overflow-hidden">
+        <!-- Top bar -->
+        <div class="border-b flex px-6 mt-4 flex-none">
+
+            <div class=" flex justify-between">
+                <!--sub navbar -->
+                <div class=" inline-flex justify-center">
+                    <span class="-ml-1 font-semibold  border-b-2 border-orange">
+                        Subprojects
+                        <span class="px-2 py-0.5 ml-auto text-xs font-mediumtracking-wide text-gray-400 bg-gray-200
+                      rounded-full">4
+                        </span>
+                    </span>
+                    <span class="px-2 text-gray-500">People</span>
+                    <span class="px-2 text-gray-500">Company</span>
+                </div>           
+            </div>
+            <div class="ml-auto hidden md:block">
+                <div class="relative">
+                    <input type="search" placeholder="Search" class="appearance-none border border-grey rounded-lg pl-8 pr-4 py-2">
+                    <div class="absolute pin-y pin-l pl-3 flex items-center justify-center">
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Chat messages -->
+        <div class="px-6 py-4 flex-1 overflow-y-scroll">
+            <!-- A Subproject -->
+            <div class="flex items-start mb-4 text-sm">
+                <div class="flex-1 overflow-hidden">
+                    <div>
+                        <span class="font-bold text-xl">Global Messaging API</span>
+                        <span class="text-grey text-xs">11:46</span>
+                    </div>
+                    <div class="flex items-start my-2">
+                        <div class="round w-10 h-10">
+                            <input type="checkbox" checked id="checkbox" />
+                            <label for="checkbox"></label>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Update: Give heads up we’ll be adding documentation to our website for the new Global Messaging API - for UK, for Beta by the end of this month Feb 2</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="flex items-start my-2">
+                        <div class="round w-10 h-10">
+                            <input type="checkbox" checked id="checkbox" />
+                            <label for="checkbox"></label>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Need to create a ticket for the New API documnetation is reviewed by DevX team and published on our wesbite.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="flex items-start my-2">
+                        <div class="round w-10 h-10 items-center text-center">
+                            <p class="font-bold text-xl">+</p>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Add Item</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- A Subproject -->
+            <div class="flex items-start mb-4 text-sm">
+                <div class="flex-1 overflow-hidden">
+                    <div>
+                        <span class="font-bold text-xl">Syniverse International Message Blocking</span>
+                        <span class="text-grey text-xs">11:46</span>
+                    </div>
+                    <div class="flex items-start my-2">
+                        <div class="round w-10 h-10">
+                            <input type="checkbox" checked id="checkbox" />
+                            <label for="checkbox"></label>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Update: Give heads up we’ll be adding documentation to our website for the new Global Messaging API - for UK, for Beta by the end of this month Feb 2</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="flex items-start my-2">
+                        <div class="round w-10 h-10">
+                            <input type="checkbox" checked id="checkbox" />
+                            <label for="checkbox"></label>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Need to create a ticket for the New API documnetation is reviewed by DevX team and published on our wesbite.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="flex items-start my-2">
+                        <div class="round w-10 h-10 items-center text-center">
+                            <p class="font-bold text-xl">+</p>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Add Item</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- A Subproject -->
+            <div class="flex items-start mb-4 text-sm">
+                <div class="flex-1 overflow-hidden">
+                    <div>
+                        <span class="font-bold text-xl">Weekly Sync Horisen and BW</span>
+                        <span class="text-grey text-xs">11:46</span>
+                    </div>
+                    <div class="flex items-start my-2">
+                        <div class="round w-10 h-10">
+                            <input type="checkbox" checked id="checkbox" />
+                            <label for="checkbox"></label>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Update: Give heads up we’ll be adding documentation to our website for the new Global Messaging API - for UK, for Beta by the end of this month Feb 2</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="flex items-start my-2">
+                        <div class="round w-10 h-10">
+                            <input type="checkbox" checked id="checkbox" />
+                            <label for="checkbox"></label>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Need to create a ticket for the New API documnetation is reviewed by DevX team and published on our wesbite.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="flex items-start my-2">
+                        <div class="round w-10 h-10 items-center text-center">
+                            <p class="font-bold text-xl">+</p>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Add Item</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pb-6 px-6 flex-none">
+            <div class="flex rounded-lg border-2 border-grey overflow-hidden">
+                <div class="focus:outline-none py-2">
+                    <input type="text" class="w-full px-4 focus:outline-none mb-4" placeholder="Subproject name" />
+                    <!-- <input type="text" class="w-full px-4 focus:outline-none mb-4" placeholder="Description" /> -->
+                    <input type="search" placeholder="Search" class="ml-4 appearance-none border focus:outline-none border-grey rounded-lg pr-4 py-2">
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Sidebar / channel list -->
+    <div class="text-purple-lighter flex-none w-3/12 p-6 hidden md:block">
+        <div class="cursor-pointer mb-4">
+            <div class="bg-white h-12 w-12 flex items-center justify-center text-black text-2xl font-semibold rounded-lg mb-1 overflow-hidden">
+                <img src="https://pbs.twimg.com/profile_images/895274026783866881/E1G1nNb0_400x400.jpg" alt="">
+            </div>
+            <div class="text-center text-white opacity-50 text-sm">&#8984;1</div>
+        </div>
+        <div class="cursor-pointer mb-4">
+            <div class="bg-indigo-lighter opacity-25 h-12 w-12 flex items-center justify-center text-black text-2xl font-semibold rounded-lg mb-1 overflow-hidden">
+                L
+            </div>
+            <div class="text-center text-white opacity-50 text-sm">&#8984;2</div>
+        </div>
+        <div class="cursor-pointer">
+            <div class="bg-white opacity-25 h-12 w-12 flex items-center justify-center text-black text-2xl font-semibold rounded-lg mb-1 overflow-hidden">
+                <svg class="fill-current h-10 w-10 block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16 10c0 .553-.048 1-.601 1H11v4.399c0 .552-.447.601-1 .601-.553 0-1-.049-1-.601V11H4.601C4.049 11 4 10.553 4 10c0-.553.049-1 .601-1H9V4.601C9 4.048 9.447 4 10 4c.553 0 1 .048 1 .601V9h4.399c.553 0 .601.447.601 1z"/></svg>
+            </div>
+        </div>
+    </div>
+</div>
