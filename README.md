@@ -26,4 +26,4 @@ Setup Application
 * bin/dev
 
 * ...
-# project_kickoff_rails_7_new
+# task_app
