@@ -1,0 +1,795 @@
+<style type="text/css">
+    .round {
+  position: relative;
+}
+
+.round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 28px;
+}
+
+.round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background-color: #66bb6a;
+  border-color: #66bb6a;
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+/* Round 2 */
+
+.round2 {
+  position: relative;
+}
+
+.round2 label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 15px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 15px;
+}
+
+.round2 label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.round2 input[type="checkbox"] {
+  visibility: hidden;
+}
+
+/*.round2 input[type="checkbox"]:checked + label {
+  background-color: #66bb6a;
+  border-color: #66bb6a;
+}*/
+
+.round2 input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+</style>
+
+<!-- component -->
+<div class="font-sans antialiased h-screen flex">
+    <div class="bg-gray-50 text-purple-lighter flex-none w-64 pb-6 hidden md:block border-r">
+        <div class="mb-2 mt-3 px-4 flex justify-between">
+            <div class="flex-auto">
+                <h1 class="font-semibold text-xl leading-tight mb-1 truncate">Tailwind CSS</h1>
+                <div class="flex items-center mb-6">
+                    <span class="bg-green rounded-full block w-2 h-2 mr-2"></span>
+                    <span class=" opacity-50 text-sm">Adam Wathan</span>
+                </div>
+            </div>
+            <div>
+                <svg class="h-6 w-6 fill-current opacity-25" viewBox="0 0 20 20">
+                    <path d="M14 8a4 4 0 1 0-8 0v7h8V8zM8.027 2.332A6.003 6.003 0 0 0 4 8v6l-3 2v1h18v-1l-3-2V8a6.003 6.003 0 0 0-4.027-5.668 2 2 0 1 0-3.945 0zM12 18a2 2 0 1 1-4 0h4z" fill-rule="evenodd" />
+                </svg>
+            </div>
+        </div>
+        <div class="mb-8">
+            <div class="px-4 mb-2 flex justify-between items-center">
+                <div class="opacity-75">Projects</div>
+                <div>
+                    <svg class="fill-current h-4 w-4 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M11 9h4v2h-4v4H9v-4H5V9h4V5h2v4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="bg-teal-dark py-1 px-4">Global Messaging</div>
+        </div>
+<!--         <div class="mb-8">
+            <div class="px-4 mb-2 flex justify-between items-center">
+                <div class="opacity-75">Direct Messages</div>
+                <div>
+                    <svg class="fill-current h-4 w-4 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M11 9h4v2h-4v4H9v-4H5V9h4V5h2v4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="flex items-center mb-3 px-4">
+                <span class="bg-green rounded-full block w-2 h-2 mr-2"></span>
+                <span class="opacity-75">Adam Wathan <span class="text-grey text-sm">(you)</span></span>
+            </div>
+            <div class="flex items-center mb-3 px-4">
+                <span class="bg-green rounded-full block w-2 h-2 mr-2"></span>
+                <span class="opacity-75">David Hemphill</span>
+            </div>
+            <div class="flex items-center px-4 mb-6 opacity-50">
+                <span class="border border-white rounded-full w-2 h-2 mr-2"></span>
+                <span class="">Steve Schoger</span>
+            </div>
+        </div> -->
+
+<!--         <div>
+        <div class="px-4 mb-2 flex justify-between items-center">
+            <div class="opacity-75">Apps</div>
+            <div>
+                <svg class="fill-current h-4 w-4 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M11 9h4v2h-4v4H9v-4H5V9h4V5h2v4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z" />
+                </svg>
+            </div>
+          </div>
+        </div> -->
+    </div>
+    <!-- Chat content -->
+    <div class="flex-1 flex flex-col bg-white overflow-hidden">
+        <!-- Top bar -->
+        <div class="border-b flex px-12 mt-4 flex-none">
+
+            <div class=" flex justify-between">
+                <!--sub navbar -->
+                <div class=" inline-flex justify-center">
+                  <ul class="flex justify-between sm:flex-row space-x-2">
+                    <li class="cursor-pointer flex items-center block px-2 py-1 font-medium border-gray-800 text-gray-500 no-underline hover:text-gray-800 focus:outline-none ">
+                      <a id="#second" href="#first" class="no-underline">Subprojects</a>
+                    </li>
+                    <li class="cursor-pointer flex items-center block py-1 font-semibold border-b-2 border-gray-800 text-gray-600 no-underline hover:text-gray-800 focus:outline-none ">
+                      <a id="#first" href="#first" class="no-underline">People</a>
+                    </li>
+                    <li class="cursor-pointer flex items-center block px-2 py-1 font-medium border-gray-800 text-gray-500 no-underline hover:text-gray-800 focus:outline-none ">
+                      <a id="#second" href="#first" class="no-underline">Teams</a>
+                    </li>
+                  </ul>
+                </div>           
+            </div>
+            <div class="ml-auto hidden md:block">
+        <!--         <div class="relative">
+                    <input type="search" placeholder="Search" class="appearance-none border border-grey rounded-lg pl-8 pr-4 py-2">
+                    <div class="absolute pin-y pin-l pl-3 flex items-center justify-center">
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <!-- Chat messages -->
+        <div class="px-2 py-4 flex-1 overflow-y-scroll">
+            <!-- A Subproject -->
+            <div class="flex items-start mb-6 text-sm">
+                <div class="flex-1 overflow-hidden">
+                    <div>
+                        <span class="font-bold text-xl ml-10">Joel Duhon</span>
+                    </div>
+                    <div class="flex items-start mt-2">
+                        <div class="flex items-center">
+                          <div class="relative flex items-center justify-center flex-shrink-0 w-8 h-8 mr-2 mb-4 md:mb-6 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-lg"></i>
+                          </div>
+                         
+                          <div class="w-10 h-12">
+                            <div class="round">
+                                <input type="checkbox" checked id="checkbox" />
+                                <label for="checkbox"></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">VPN connection</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex">
+                          <div class="w-8 mr-2">
+                          </div>                         
+                          <div class="w-10 border-b">
+                    
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden border-b">
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start mt-2">
+                        <div class="flex items-center">
+                          <div class="relative flex items-center justify-center flex-shrink-0 w-8 h-8 mr-2 mb-4 md:mb-6 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-lg"></i>
+                          </div>
+                         
+                          <div class="w-10 h-12">
+                            <div class="round">
+                                <input type="checkbox" checked id="checkbox" />
+                                <label for="checkbox"></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Need to create a ticket for the New API documnetation is reviewed by DevX team and published on our wesbite.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex">
+                          <div class="w-8 mr-2">
+                          </div>                         
+                          <div class="w-10 border-b">
+                    
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden border-b">
+                        </div>
+                    </div>
+
+                    <div class="pb-6 pl-10 flex-none mt-2">
+                        <div class="flex rounded-lg border-2 border-grey overflow-hidden">
+                            <div class="focus:outline-none py-2">
+                                <input class="w-full px-4 focus:outline-none mb-13" placeholder="New item">
+                                <input class="w-full px-4 focus:outline-none mb-2" placeholder="Description" />
+
+                                <button class="ml-4 p-1 pl-2 pr-2 focus:outline-none bg-white border-2 text-sm rounded-md">
+                                    <i class="fa-regular fa-calendar"></i>
+                                    <span>Today</span>
+                                </button>
+                                <button class="ml-1 p-1 pl-2 pr-2 focus:outline-none bg-white border-2 text-sm rounded-md">
+                                    <i class="fa-regular fa-flag"></i>
+                                    <span>Priority</span>
+                                </button>
+                                <button class="ml-1 p-1 pl-2 pr-2 focus:outline-none bg-white border-2 text-sm rounded-md">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>Reminder</span>
+                                </button>
+
+                                <!-- <input type="search" placeholder="Search" class="ml-4 appearance-none border focus:outline-none border-grey rounded-lg pr-4 py-2"> -->
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+            <!-- A Subproject -->
+            <div class="flex items-start mb-4 text-sm">
+                <div class="flex-1 overflow-hidden">
+                    <div>
+                        <span class="font-bold text-xl ml-10">Andreea Georgescu</span>
+                    </div>
+                    <div class="flex items-start my-2">
+                        <div class="flex items-center">
+                          <div class="relative flex items-center justify-center flex-shrink-0 w-8 h-8 mr-2 mb-4 md:mb-6 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-lg"></i>
+                          </div>
+                         
+                          <div class="w-10 h-12">
+                            <div class="round">
+                                <input type="checkbox" checked id="checkbox" />
+                                <label for="checkbox"></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Update: Give heads up we’ll be adding documentation to our website for the new Global Messaging API - for UK, for Beta by the end of this month Feb 2</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex">
+                          <div class="w-8 mr-2">
+                          </div>                         
+                          <div class="w-10 border-b">
+                    
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden border-b">
+                        </div>
+                    </div>
+                    <div class="flex items-start my-2">
+                        <div class="flex items-center">
+                          <div class="relative flex items-center justify-center flex-shrink-0 w-8 h-8 mr-2 mb-4 md:mb-6 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-lg"></i>
+                          </div>
+                         
+                          <div class="w-10 h-12">
+                            <div class="round">
+                                <input type="checkbox" checked id="checkbox" />
+                                <label for="checkbox"></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Need to create a ticket for the New API documnetation is reviewed by DevX team and published on our wesbite.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex">
+                          <div class="w-8 mr-2">
+                          </div>                         
+                          <div class="w-10 border-b">
+                    
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden border-b">
+                        </div>
+                    </div>
+                    <div class="flex items-start my-2">
+                        <div class="round w-10 h-10 items-center text-center">
+                            <i class="fa fa-solid fa-plus"></i>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Add Item</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- A Subproject -->
+            <div class="flex items-start mb-4 text-sm">
+                <div class="flex-1 overflow-hidden">
+                    <div>
+                    	<span class="font-bold text-xl ml-10">Julie Wilhelm</span>
+                    </div>
+                    <div class="flex items-start my-2">
+                        <div class="flex items-center">
+                          <div class="relative flex items-center justify-center flex-shrink-0 w-8 h-8 mr-2 mb-4 md:mb-6 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-lg"></i>
+                          </div>
+                         
+                          <div class="w-10 h-12">
+                            <div class="round">
+                                <input type="checkbox" checked id="checkbox" />
+                                <label for="checkbox"></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Update: Give heads up we’ll be adding documentation to our website for the new Global Messaging API - for UK, for Beta by the end of this month Feb 2</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex">
+                          <div class="w-8 mr-2">
+                          </div>                         
+                          <div class="w-10 border-b">
+                    
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden border-b">
+                        </div>
+                    </div>
+                    <div class="flex items-start my-2">
+                        <div class="flex items-center">
+                          <div class="relative flex items-center justify-center flex-shrink-0 w-8 h-8 mr-2 mb-4 md:mb-6 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-lg"></i>
+                          </div>
+                         
+                          <div class="w-10 h-12">
+                            <div class="round">
+                                <input type="checkbox" checked id="checkbox" />
+                                <label for="checkbox"></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Need to create a ticket for the New API documnetation is reviewed by DevX team and published on our wesbite.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex">
+                          <div class="w-8 mr-2">
+                          </div>                         
+                          <div class="w-10 border-b">
+                    
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden border-b">
+                        </div>
+                    </div>
+                    <div class="flex items-start my-2">
+                        <div class="round w-10 h-10 items-center text-center">
+                            <i class="fa fa-solid fa-plus"></i>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-black leading-normal">Add Item</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pb-6 pl-12 pr-2 flex-none mt-4">
+            <div class="flex rounded-lg border-2 border-grey overflow-hidden">
+                <div class="focus:outline-none py-2">
+                    <input class="w-full px-4 focus:outline-none mb-4" placeholder="Subproject name" />
+                    <!-- <input type="text" class="w-full px-4 focus:outline-none mb-4" placeholder="Description" /> -->
+                    <!-- <input type="search" placeholder="Search" class="ml-4 appearance-none border focus:outline-none border-grey rounded-lg pr-4 py-2"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sidebar / channel list -->
+    <div class="flex-1 flex flex-col bg-white overflow-hidden flex-none w-4/12 px-6">
+      <div class="border-b flex justify-end ...">
+        <div class="relative flex items-center justify-center flex-shrink-0 w-8 h-8 mr-2 mt-2 mb-3 overflow-hidden bg-gray-200 rounded">
+          <i class="fa-solid fa-ellipsis fa-lg"></i>
+        </div>
+
+        <div class="relative flex items-center justify-center flex-shrink-0 w-8 h-8 mr-2 mt-2 mb-3 overflow-hidden bg-gray-200 rounded">
+          <i class="fa-solid fa-xmark fa-lg"></i>
+        </div>
+      </div>
+        <!-- Top bar -->
+  
+        <!-- Chat messages -->
+        <div class="px-2 py-4 flex-1 overflow-y-scroll">
+            <!-- A Subproject -->
+            <div class="flex items-start mb-4 text-sm">
+                <div class="flex-1 overflow-hidden">
+                    <div>
+                        <span class="font-bold text-xl">VPN connection</span>
+                    </div>
+                    <div class="flex mt-2">
+                      <div class="relative flex items-center justify-center flex-shrink-0 w-10 h-10 mr-2 mb-4 md:mb-6 overflow-hidden bg-gray-200 rounded">
+                        <i class="fa fa-regular fa-image fa-lg"></i>
+                      </div>
+
+                      <div class="relative flex items-center justify-center flex-shrink-0 w-10 h-10 mr-2 mb-4 md:mb-6 overflow-hidden bg-gray-200 rounded">
+                        <i class="fa fa-light fa-bookmark fa-lg"></i>
+                      </div>
+
+                      <div class="relative flex items-center justify-center flex-shrink-0 w-10 h-10 mr-2 mb-4 md:mb-6 overflow-hidden bg-gray-200 rounded">
+                        <i class="fa fa-solid fa-video fa-lg"></i>
+                      </div>
+
+                      <div class="relative flex items-center justify-center flex-shrink-0 w-10 h-10 mr-2 mb-4 md:mb-6 overflow-hidden bg-gray-200 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+                        </svg>
+
+                      </div>
+
+                      <div class="relative flex items-center justify-center flex-shrink-0 w-10 h-10 mr-2 mb-4 md:mb-6 overflow-hidden bg-gray-200 rounded">
+                        <i class="fa fa-solid fa-code fa-lg"></i>
+                      </div>
+
+                      <div class="relative flex items-center justify-center flex-shrink-0 w-10 h-10 mr-2 mb-4 md:mb-6 overflow-hidden bg-gray-200 rounded">
+                        <i class="fa fa-solid fa-square-check fa-lg"></i>
+                      </div>
+                        
+                      <div class="relative flex items-center justify-center flex-shrink-0 w-10 h-10 mr-2 mb-4 md:mb-6 overflow-hidden bg-gray-200 rounded">
+                        <i class="fa fa-solid fa-paperclip fa-lg"></i>
+                      </div>
+                        
+
+
+                        
+                    </div>
+                    <div class="mb-3">
+                        <span class="font-bold text-sm ">Subitems</span>
+                    </div>
+                    <div class="flex items-start mt-2">
+                        <div class="flex items-center">
+                         
+                          <div class="flex items-center  mb-4">
+                             <div class="relative flex items-center justify-center flex-shrink-0 w-5 h-5 mr-1 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-sm" aria-hidden="true"></i>
+                          </div>
+                         
+                              <div class="round2 py-2 px-2 mr-2">
+                                  <label for="checkbox"></label>
+                              </div>
+                              <div class="flex-1 overflow-hidden">
+                                <p class="text-black leading-normal">Send form to Horisen</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex">
+                          <div class="w-8 mr-2">
+                          </div>                         
+                          <div class="w-10 border-b">
+                    
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden border-b">
+                        </div>
+                    </div>
+                    <div class="flex items-start mt-2">
+                        <div class="flex items-center">
+                         
+                          <div class="flex items-center  mb-4">
+                             <div class="relative flex items-center justify-center flex-shrink-0 w-5 h-5 mr-1 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-sm" aria-hidden="true"></i>
+                          </div>
+                         
+                              <div class="round2 py-2 px-2 mr-2">
+                                  <label for="checkbox"></label>
+                              </div>
+                              <div class="flex-1 overflow-hidden">
+                                <p class="text-black leading-normal">Get VPN setup</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex">
+                          <div class="w-8 mr-2">
+                          </div>                         
+                          <div class="w-10 border-b">
+                    
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden border-b">
+                        </div>
+                    </div>
+                    <div class="flex items-start mt-2">
+                        <div class="flex items-center">
+                         
+                          <div class="flex items-center  mb-4">
+                             <div class="relative flex items-center justify-center flex-shrink-0 w-5 h-5 mr-1 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-sm" aria-hidden="true"></i>
+                          </div>
+                         
+                              <div class="round2 py-2 px-2 mr-2">
+                                  <label for="checkbox"></label>
+                              </div>
+                              <div class="flex-1 overflow-hidden">
+                                <p class="text-black leading-normal">Get SMPP Binds details to configure in Horisen</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex">
+                          <div class="w-8 mr-2">
+                          </div>                         
+                          <div class="w-10 border-b">
+                    
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden border-b">
+                        </div>
+                    </div>
+                    <div class="flex items-start mt-2">
+                        <div class="flex items-center">
+                         
+                          <div class="flex items-center  mb-4">
+                             <div class="relative flex items-center justify-center flex-shrink-0 w-5 h-5 mr-1 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-sm" aria-hidden="true"></i>
+                          </div>
+                         
+                              <div class="round2 py-2 px-2 mr-2">
+                                  <label for="checkbox"></label>
+                              </div>
+                              <div class="flex-1 overflow-hidden">
+                                <p class="text-black leading-normal">Setup SMPP Binds details in Horisen</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex">
+                          <div class="w-8 mr-2">
+                          </div>                         
+                          <div class="w-10 border-b">
+                    
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden border-b">
+                        </div>
+                    </div>
+                    <div class="flex items-start mt-2">
+                        <div class="flex items-center">
+                         
+                          <div class="flex items-center  mb-4">
+                             <div class="relative flex items-center justify-center flex-shrink-0 w-5 h-5 mr-1 overflow-hidden bg-gray-50 rounded">
+                             <i class="fa fa-solid fa-grip-vertical fa-sm" aria-hidden="true"></i>
+                          </div>
+                         
+                              <div class="round2 py-2 px-2 mr-2">
+                                  <label for="checkbox"></label>
+                              </div>
+                              <div class="flex-1 overflow-hidden">
+                                <p class="text-black leading-normal">See we can get the virtual number from Gamma</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex">
+                          <div class="w-8 mr-2">
+                          </div>                         
+                          <div class="w-10 border-b">
+                    
+                          </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden border-b">
+                        </div>
+                    </div>
+
+
+                    <div class="mb-3 mt-5">
+                        <span class="font-bold text-sm ">Bookmarks</span>
+                    </div>
+
+                    <div class="flex items-center  mb-2">
+                      <div class="relative flex items-center justify-center flex-shrink-0 w-5 h-5 mr-1 overflow-hidden bg-gray-50 rounded">
+                        <i class="fa fa-solid fa-grip-vertical fa-sm" aria-hidden="true"></i>
+                      </div>
+
+                      <div class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 bg-white border rounded-md p-3">
+                          <div class="flex flex-col justify-around flex-grow">
+                              <div class="text-xs whitespace-nowrap">
+                                  www.instagram.com
+                              </div>
+                              <div class="">
+                                  https://www.instagram.com/four12men/
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center  mb-2">
+                      <div class="relative flex items-center justify-center flex-shrink-0 w-5 h-5 mr-1 overflow-hidden bg-gray-50 rounded">
+                        <i class="fa fa-solid fa-grip-vertical fa-sm" aria-hidden="true"></i>
+                      </div>
+
+                      <div class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 bg-white border rounded-md p-3">
+                          <div class="flex flex-col justify-around flex-grow">
+                              <div class="text-xs whitespace-nowrap">
+                                  www.instagram.com
+                              </div>
+                              <div class="">
+                                  https://www.instagram.com/four12men/
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    
+                    <div class="flex items-center  mb-2">
+                      <div class="relative flex items-center justify-center flex-shrink-0 w-5 h-5 mr-1 overflow-hidden bg-gray-50 rounded">
+                        <i class="fa fa-solid fa-grip-vertical fa-sm" aria-hidden="true"></i>
+                      </div>
+
+                      <div class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 bg-white border rounded-md p-3">
+                          <div class="flex flex-col justify-around flex-grow">
+                              <div class="text-xs whitespace-nowrap">
+                                  www.instagram.com
+                              </div>
+                              <div class="">
+                                  https://www.instagram.com/four12men/
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3 mt-5">
+                <span class="font-bold text-sm ">Images</span>
+            </div>
+
+            <div class="flex items-center  mb-2">
+              <div class="relative flex items-center justify-center flex-shrink-0 w-5 h-5 mr-1 overflow-hidden bg-gray-50 rounded">
+                <i class="fa fa-solid fa-grip-vertical fa-sm" aria-hidden="true"></i>
+              </div>
+
+              <div class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 bg-white">
+                  <div class="flex flex-col justify-around flex-grow">
+                      <img src="https://geographical.co.uk/wp-content/uploads/Photographing-mountains-in-spring-1200x800.jpg" alt="Girl in a jacket" width="500" height="600">
+                  </div>
+              </div>
+            </div>
+
+            <div class="mb-3 mt-5">
+                <span class="font-bold text-sm ">Files</span>
+            </div>
+
+            <div class="flex items-center  mb-2">
+              <div class="relative flex items-center justify-center flex-shrink-0 w-5 h-5 mr-1 overflow-hidden bg-gray-50 rounded">
+                <i class="fa fa-solid fa-grip-vertical fa-sm" aria-hidden="true"></i>
+              </div>
+
+              <div class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 bg-white">
+                <div class="flex flex-col justify-around flex-grow">
+                    <div class="flex items-center">
+                      <i class="fa-solid fa-file-import mr-1"></i>
+                      <p>
+                          Anthony Francis Product Manager CV.docx
+                      </p>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center  mb-2">
+              <div class="relative flex items-center justify-center flex-shrink-0 w-5 h-5 mr-1 overflow-hidden bg-gray-50 rounded">
+                <i class="fa fa-solid fa-grip-vertical fa-sm" aria-hidden="true"></i>
+              </div>
+
+              <div class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 bg-white">
+                <div class="flex flex-col justify-around flex-grow">
+                    <div class="flex items-center">
+                      <i class="fa-solid fa-file-import mr-1"></i>
+                      <p>
+                          Anthony Francis Product Manager CV.docx
+                      </p>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center  mb-2">
+              <div class="relative flex items-center justify-center flex-shrink-0 w-5 h-5 mr-1 overflow-hidden bg-gray-50 rounded">
+                <i class="fa fa-solid fa-grip-vertical fa-sm" aria-hidden="true"></i>
+              </div>
+
+              <div class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 bg-white">
+                <div class="flex flex-col justify-around flex-grow">
+                    <div class="flex items-center">
+                      <i class="fa-solid fa-file-import mr-1"></i>
+                      <p>
+                          Anthony Francis Product Manager CV.docx
+                      </p>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3 mt-5">
+                <span class="font-bold text-sm ">Videos</span>
+            </div>
+
+            <div class="flex items-center  mb-2">
+              <div class="relative flex items-center justify-center flex-shrink-0 w-5 h-5 mr-1 overflow-hidden bg-gray-50 rounded">
+                <i class="fa fa-solid fa-grip-vertical fa-sm" aria-hidden="true"></i>
+              </div>
+
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/NBPSOi1-wsU?enablejsapi=1&amp;autoplay=1"></iframe>
+            </div>
+            
+        </div>
+        <div class="pb-6 pl-12 flex-none mt-4">
+            <div class="flex rounded-lg border-2 border-grey overflow-hidden">
+                <div class="focus:outline-none py-2">
+                    <input class="w-full px-4 focus:outline-none mb-4" placeholder="Add a comment">
+                    <!-- <input type="text" class="w-full px-4 focus:outline-none mb-4" placeholder="Description" /> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--     <div class="text-purple-lighter flex-none w-3/12 hidden md:block">
+      <div class="flex justify-end ...">
+      
+        <div class="relative flex items-center justify-center flex-shrink-0 w-8 h-8 mr-2 mt-2 overflow-hidden bg-gray-200 rounded">
+          <i class="fa-solid fa-ellipsis fa-lg"></i>
+        </div>
+
+        <div class="relative flex items-center justify-center flex-shrink-0 w-8 h-8 mr-2 mt-2 overflow-hidden bg-gray-200 rounded">
+          <i class="fa-solid fa-xmark fa-lg"></i>
+        </div>
+      </div>
+    </div> -->
+</div>
