@@ -1,5 +1,7 @@
 class SubprojectsController < ApplicationController
   before_action :set_subproject, only: %i[ show edit update destroy ]
+  before_action :set_project, only: [:show, :edit, :update, :create, :new, :destroy, :confirm_email]
+
 
   # GET /subprojects or /subprojects.json
   def index
@@ -63,8 +65,12 @@ class SubprojectsController < ApplicationController
       @subproject = Subproject.find(params[:id])
     end
 
+    def set_project
+      @project = Project.find(params[:project_id])
+    end
+
     # Only allow a list of trusted parameters through.
     def subproject_params
-      params.require(:subproject).permit(:subproject_name)
+      params.require(:subproject).permit(:subproject_name, :project_id)
     end
 end
