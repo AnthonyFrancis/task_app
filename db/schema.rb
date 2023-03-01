@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_01_113417) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_01_151047) do
   create_table "projects", force: :cascade do |t|
     t.string "project_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.index ["user_id"], name: "index_projects_on_user_id"
+  end
+
+  create_table "subprojects", force: :cascade do |t|
+    t.string "subproject_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "project_id"
+    t.index ["project_id"], name: "index_subprojects_on_project_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -32,4 +40,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_113417) do
   end
 
   add_foreign_key "projects", "users"
+  add_foreign_key "subprojects", "projects"
 end
