@@ -9,7 +9,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1 or /projects/1.json
   def show
-    @projects = Project.all
+    @project_sidebar = Project.all
   end
 
   # GET /projects/new

@@ -13,3 +13,17 @@
     <%#= link_to 'Back to projects', projects_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
 </div>
+
+<% content_for :side_navbar do %>
+  <%= render partial: "application/side_navbar" %>
+<% end %>
+
+<% content_for :project_content do %>
+  <%= render partial: "application/project_content" %>
+<% end %>
+
+<% content_for :content_list do %>
+  <%= render partial: "application/content_list" %>
+<% end %>
+
+<%= render "basic_layout" %>
