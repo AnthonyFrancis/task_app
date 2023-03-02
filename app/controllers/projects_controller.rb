@@ -9,7 +9,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1 or /projects/1.json
   def show
-    @project_sidebar = Project.all
+    @project_sidebar = current_user.projects.all.order("created_at ASC")
   end
 
   # GET /projects/new

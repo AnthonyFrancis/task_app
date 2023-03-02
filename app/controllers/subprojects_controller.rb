@@ -1,11 +1,11 @@
 class SubprojectsController < ApplicationController
   before_action :set_subproject, only: %i[ show edit update destroy ]
-  before_action :set_project, only: [:show, :edit, :update, :create, :new, :destroy, :confirm_email]
+  before_action :set_project, only: [:show, :edit, :update, :create, :new, :destroy]
 
 
   # GET /subprojects or /subprojects.json
   def index
-    @subprojects = Subproject.all
+    @subprojects = current_user.subprojects
   end
 
   # GET /subprojects/1 or /subprojects/1.json
@@ -14,7 +14,7 @@ class SubprojectsController < ApplicationController
 
   # GET /subprojects/new
   def new
-    @subproject = Subproject.new
+    @subproject = @project.subprojects.new
   end
 
   # GET /subprojects/1/edit
@@ -23,11 +23,11 @@ class SubprojectsController < ApplicationController
 
   # POST /subprojects or /subprojects.json
   def create
-    @subproject = Subproject.new(subproject_params)
+    @subproject = @project.subprojects.build(subproject_params)
 
     respond_to do |format|
       if @subproject.save
-        format.html { redirect_to subproject_url(@subproject), notice: "Subproject was successfully created." }
+        format.html { redirect_to @subproject.project, notice: "Subproject was successfully created." }
         format.json { render :show, status: :created, location: @subproject }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,7 +40,7 @@ class SubprojectsController < ApplicationController
   def update
     respond_to do |format|
       if @subproject.update(subproject_params)
-        format.html { redirect_to subproject_url(@subproject), notice: "Subproject was successfully updated." }
+        format.html { redirect_to @subproject.project, notice: "Subproject was successfully updated." }
         format.json { render :show, status: :ok, location: @subproject }
       else
         format.html { render :edit, status: :unprocessable_entity }

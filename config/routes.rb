@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :subprojects
-  resources :projects
+  resources :projects do
+      resources :subprojects
+  end
   devise_for :users
   root to: "pages#index"
   get "people" => "pages#people"
