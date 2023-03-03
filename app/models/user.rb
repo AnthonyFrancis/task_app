@@ -7,10 +7,11 @@ class User < ApplicationRecord
   has_many :projects, dependent: :destroy
 
 
-  after_create :create_getting_started
+  after_create :create_project_and_subproject
 
-  def create_getting_started
-    Project.create(:user_id => self.id, :project_name => "Getting Started")
+  def create_project_and_subproject
+    project = Project.create(user: self, project_name: "Getting Started")
+    project.subprojects.create(subproject_name: "Here are the basic")    
   end
 
 end
