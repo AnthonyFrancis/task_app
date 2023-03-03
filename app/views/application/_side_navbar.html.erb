@@ -18,6 +18,8 @@
                                 <span class="block py-2 text-sm text-gray-800 hover:bg-gray-200">Logout </span>
                             <% end %>
                             <%#= link_to "Link Sign out rails-ujs and Turbo", destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: "block px-6 py-2 text-sm text-gray-800 hover:bg-gray-200" %>
+
+                            <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete } %>
                         </div>
                     </div>
                 </div>

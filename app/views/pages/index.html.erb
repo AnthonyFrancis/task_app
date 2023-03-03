@@ -1,4 +1,4 @@
-<% if user_signed_in? %>
+<% if current_user %>
   <% content_for :side_navbar do %>
     <%= render partial: "application/side_navbar" %>
   <% end %>

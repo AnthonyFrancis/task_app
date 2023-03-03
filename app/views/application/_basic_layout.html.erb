@@ -1,4 +1,4 @@
-<% if user_signed_in? %>
+<% if current_user %>
 
   <%= yield :side_navbar %>
   <%= yield :project_content  %>
