@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users
   
   resources :projects do
       resources :subprojects
   end
-  devise_for :users, controllers: { sessions: "sessions" }
+  # devise_for :users, controllers: { sessions: "sessions" }
   
   root to: "pages#index"
   get "people" => "pages#people"
