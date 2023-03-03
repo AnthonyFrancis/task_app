@@ -1,5 +1,6 @@
 <% if current_user %>
   <% content_for :side_navbar do %>
+    <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete } %>
     <%= render partial: "application/side_navbar" %>
   <% end %>
 
@@ -10,6 +11,8 @@
   <% content_for :content_list do %>
     <%= render partial: "application/content_list" %>
   <% end %>
+<% else %>
+
 <% end %>
 
 <%= render "basic_layout" %>
