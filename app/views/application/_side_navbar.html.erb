@@ -35,11 +35,37 @@
                     </svg>
                 </div>
             </div>
-            <div class="flex flex-col px-6">
-                <%= render @project_sidebar %>
+            <div class="flex flex-col">
+                <%#= render @project_sidebar %>
+
+                <%#= render partial: 'projects/projects_sidebar', :project => @project %>
+
+                <% @project_sidebar.each do |project| %>
+                    <%= link_to project do %>
+
+                            <div class="flex bg-teal-dark py-1 px-6 hover:bg-gray-200 justify-between hover-trigger">
+                                <div>
+                                    <%= project.project_name %>
+                                </div>
+                                <div class="hover-target relative flex items-center justify-center flex-shrink-0 w-6 h-6 overflow-hidden bg-gray-50 rounded hover:bg-gray-200">
+                                    <i class="fa fa-light fa-ellipsis fa-sm"></i>
+                                </div>
+                            </div>
+                    <% end %>
+                <% end %>
             </div>
    	    </div>
 
+<style>
+.hover-trigger .hover-target {
+    display: none;
+}
+
+.hover-trigger:hover .hover-target {
+    display: block;
+    padding-left: 6px
+}
+</style>
        
 
 </div>

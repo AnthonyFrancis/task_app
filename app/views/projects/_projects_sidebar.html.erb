@@ -1,9 +1,10 @@
 
-<%= link_to project_path do %>
-<div class="bg-teal-dark py-1 px-6">
-  <%= project.project_name %>
-</div>
-
+<% @projects.each do |project| %>
+  <%= link_to project_path do %>
+    <div class="bg-teal-dark py-1 px-6 hover:bg-gray-200 ">
+      <%= project.project_name %>
+    </div>
+  <% end %>
 <% end %>
 
 <!-- <div id="<%#= dom_id project %>">
