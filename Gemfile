@@ -47,7 +47,7 @@ gem "bootsnap", require: false
 
 
 # custom gems
-gem 'devise'
+gem 'devise', github: 'heartcombo/devise', branch:'main'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
