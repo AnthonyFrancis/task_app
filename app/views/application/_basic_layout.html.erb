@@ -1,5 +1,5 @@
 <% if current_user %>
-
+  <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete } %>
   <%= yield :side_navbar %>
   <%= yield :project_content  %>
   <%= yield :content_list  %>
