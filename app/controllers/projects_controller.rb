@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
   # GET /projects or /projects.json
   def index
     @projects = Project.all
+    @project_sidebar = current_user.projects.all.order("created_at ASC")
   end
 
   # GET /projects/1 or /projects/1.json

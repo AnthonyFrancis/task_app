@@ -2,7 +2,9 @@ class PagesController < ApplicationController
   before_action :set_project, only: %i[ show edit update destroy ]
   
   def index
-    @project_sidebar = Project.all
+    if user_signed_in?
+      @project_sidebar = current_user.projects.all.order("created_at ASC")
+    end
   end
 
   def people

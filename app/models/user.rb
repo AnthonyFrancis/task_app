@@ -5,4 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :projects, dependent: :destroy
+
+
+  after_create :create_getting_started
+
+  def create_getting_started
+    Project.create(:user_id => self.id, :project_name => "Getting Started")
+  end
+
 end
