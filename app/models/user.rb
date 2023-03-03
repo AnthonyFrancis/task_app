@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
   def create_project_and_subproject
     project = Project.create(user: self, project_name: "Getting Started")
-    project.subprojects.create(subproject_name: "Here are the basic")    
+    project.subprojects.create(subproject_name: "Here are the basics")    
   end
 
 end
