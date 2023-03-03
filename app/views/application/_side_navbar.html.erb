@@ -13,7 +13,12 @@
 
                         <div x-show="dropdownOpen" class="absolute right-0 z-20 w-11/12 mt-2 overflow-hidden bg-white rounded-md shadow-xl">
                             <%= link_to "Account", edit_user_registration_path, class: "block px-6 py-2 text-sm text-gray-800 hover:bg-gray-200" %>
-                            <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete }, id: "sign_out_menu_link", class: "block px-6 py-2 text-sm text-gray-800 hover:bg-gray-200" %>
+                            <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete }, class: "block px-6 py-2 text-sm text-gray-800 hover:bg-gray-200" %>
+                            <%= link_to "Sign out 1", destroy_user_session_path, method: :delete %>
+                            <%= button_to "Button Sign out turbo", destroy_user_session_path, method: :delete %>
+                            <%= link_to "Link Sign out turbo", destroy_user_session_path, data: { turbo_method: :delete } %>
+                            <%= button_to "Button Sign out rails-ujs and Turbo", destroy_user_session_path, method: :delete %>
+                            <%= link_to "Link Sign out rails-ujs and Turbo", destroy_user_session_path, method: :delete, data: { turbo_method: :delete } %>
                         </div>
                     </div>
                 </div>
